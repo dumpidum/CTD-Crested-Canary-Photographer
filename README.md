@@ -38,7 +38,7 @@ And you have the app in port localhost:3000.
 Please let us know of any bugs or imperfections. Your input will be greatly appreciated. It has been a wonderful learning experience for us.
 
 Contributors
-Ignat Babenko, Kevin Kirui, Andrew Shapiro, Fabian Aparicio
+Ignat Babenko, Kelvin Kirui, Andrew Shapiro, Fabian Aparicio
 
 
 

@@ -1,0 +1,27 @@
+[
+    {
+        "title": "Portfolio",
+        "children": [
+            {
+                "title": "Portraits",
+                "path": "/portfolio/portraits"
+            },
+            {
+                "title": "Products",
+                "path": "/portfolio/products"
+            },
+            {
+                "title": "Video",
+                "path": "/portfolio/video"
+            }
+        ]
+    },
+    {
+        "title": "Inquiry",
+        "path": "/inquiry"
+    },
+    {
+        "title": "About",
+        "path": "/about"
+    }
+]
