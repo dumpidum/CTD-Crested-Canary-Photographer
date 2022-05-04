@@ -1,6 +1,6 @@
 import { useState } from "react"
 
-export default function SidebarItem({ item }) {
+const SidebarItem = ({ item }) => {
     const [open, setOpen] = useState(false)
 
     if (item.children) {
@@ -25,3 +25,5 @@ export default function SidebarItem({ item }) {
         )
     }
 }
+
+export default SidebarItem;
