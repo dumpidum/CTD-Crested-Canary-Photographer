@@ -18,10 +18,10 @@
     },
     {
         "title": "Inquiry",
-        "path": "/inquiry"
+        "path": "/Inquiry"
     },
     {
         "title": "About",
-        "path": "/about"
+        "path": "/About"
     }
 ]
