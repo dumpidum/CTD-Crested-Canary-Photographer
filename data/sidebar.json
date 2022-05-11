@@ -4,24 +4,24 @@
         "children": [
             {
                 "title": "Portraits",
-                "path": "/portfolio/portraits"
+                "path": "/portraits"
             },
             {
                 "title": "Products",
-                "path": "/portfolio/products"
+                "path": "/products"
             },
             {
                 "title": "Video",
-                "path": "/portfolio/video"
+                "path": "/video"
             }
         ]
     },
     {
         "title": "Inquiry",
-        "path": "/Inquiry"
+        "path": "/inquiry"
     },
     {
         "title": "About",
-        "path": "/About"
+        "path": "/about"
     }
 ]
