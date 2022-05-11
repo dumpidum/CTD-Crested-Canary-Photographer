@@ -3,7 +3,6 @@ import Header from "./layout/Header";
 import Sidebar from "./sidebar/Sidebar";
 import Footer from "./layout/Footer";
 
-
 export const siteTitle = "Photographer App";
 
 const Layout = ({ home, children }) => {
@@ -29,6 +28,7 @@ const Layout = ({ home, children }) => {
             <Header isHome={home} />
             <main>
                 <Sidebar />
+                {children}
             </main>
             <Footer />
         </>

@@ -1,44 +1,30 @@
-import React from "react";
-import Footer from "../components/layout/Footer";
-import Head from "next/head";
-import Header from "../components/layout/Header";
-import Sidebar from "../components/sidebar/Sidebar";
-import AboutFull from "./AboutFull";
 import styles from '../styles/About.module.css';
-export const siteTitle = "Photographer App";
 
-const About = ({ home, children }) => {
 
+function About() {
     return (
-        <>
-            <Head>
-                {/* <link rel='icon' href='/favicon.png' /> */}
-                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.1/font/bootstrap-icons.min.css" integrity="sha512-Oy+sz5W86PK0ZIkawrG0iv7XwWhYecM3exvUtMKNJMekGFJtVAhibhRPTpmyTj8+lJCkmWfnpxKgT2OopquBHA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-                <link rel="preconnect" href="https://fonts.googleapis.com" />
-                <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-                <link href="https://fonts.googleapis.com/css2?family=Bellefair&display=swap" rel="stylesheet" />
-                <meta name='viewport' content='width=device-width, initial-scale=1.0' />
-                <meta
-                    name='description'
-                    content='Collaborative project by Code the Dream students to build a photographer web app using Next.js and Firebase authentication and Cloud Firestore'
+        <div className={styles.about}>
+            <div >
+                <img className={styles.image}
+                    src="https://www.adorama.com/alc/wp-content/uploads/2021/04/photography-camera-learning-feature.jpg"
+                    alt="photographer"
                 />
-                <meta
-                    name='authors'
-                    content='Ignat Babenko, Kelvin Kirui, Fabian Aparicio, Andrew Shapiro'
-                />
-                <meta name='title' content={siteTitle} />
-            </Head>
-            <Header isHome={home} />
-            <main>
-                <div className={styles.parent}>
-                    <Sidebar />
-                    <AboutFull />
-                </div>
-            </main>
-            <Footer />
+            </div>
+            <div className={styles.container}>
+                {/* <h1 class="font-weight-light">About Us</h1> */}
 
-        </>
-    );
+                <h3>Welcome to Photographer studio.</h3>
+                <p>
+                    Photos are about visual storytelling. In today’s media-rich environment, people often look first to images, then to words. With this in mind, it is important that every image be carefully selected to communicate with impact.<br />
+                    Now you can share your images, showcase your work, deliver digital downloads, and sell your photos online in a beautiful modern gallery store built for photographers and their clients.<br />
+                    Photographer studio proudly runs by its member photographers. Our mission is to help young professionals share and sale their works to the public. Our studio gallery contains both high-resolution images for use in print materials and low-resolution images for Web use.<br />
+                    There is something for everyone in Photographer studio.
+                </p>
+
+            </div>
+
+        </div>
+    )
 }
 
 export default About;
