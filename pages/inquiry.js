@@ -1,66 +1,82 @@
-import React from "react";
+import React from 'react';
+import emailjs from 'emailjs-com';
 import styles from '../styles/Inquiry.module.css';
 
-function Inquiry() {
-    return (
-        <div className={styles.container}>
-            <h1 id="title" className={styles.textCenter}> Contact form </h1>
-            <div >
-                <form id="survey-form">
+export default function ContactUs()  {
+    function sendEmail(e) {
+            e.preventDefault();
 
-                    <div className={styles.formGroup}>
-                        <label id="name-label" for="inputname">First and last name</label>
-                        <div className={styles.name}>
-                            <input type="text"
-                                className={styles.formControlName}
-                                id="First_name"
-                                placeholder="First name" required
+        emailjs.sendForm(process.env.NEXT_PUBLIC_YOUR_SERVICE_ID, 'template_ri9kmmp', e.target, process.env.NEXT_PUBLIC_YOUR_USER_ID)
+            .then((result) => {
+                alert('email sent successfully');
+            }, (error) => {
+                alert('error sending email');
+            });
+            e.target.reset();
+    }
+    
+        return (
+            <div className={styles.container}>
+                <h1 id="title" className={styles.textCenter}> Contact form </h1>
+                <div >
+                    <form id="survey-form"  onSubmit={sendEmail}>
+
+                        <div className={styles.formGroup}>
+                            <label id="name-label" for="inputname">First and last name</label>
+                            <div className={styles.name}>
+                                <input type="text" name="user_name"
+                                    className={styles.formControlName}
+                                    id="First_name"
+                                    placeholder="First name" required
+                                />
+                                <input type="text" name="user_last_name"
+                                    className={styles.formControlName}
+                                    id="Last_name"
+                                    placeholder="Last name" required
+                                /></div>
+                        </div>
+                        <div className={styles.formGroup}>
+                            <label id="email-label" for="inputemail"> Email </label>
+                            <input type="email"
+                                className={styles.formControl}
+                                id="email"
+                                name="user_email"
+                                placeholder="email"
+                                required
                             />
-                            <input type="text"
-                                className={styles.formControlName}
-                                id="Last_name"
-                                placeholder="Last name" required
-                            /></div>
-                    </div>
-                    <div className={styles.formGroup}>
-                        <label id="email-label" for="inputemail"> Email </label>
-                        <input type="email"
-                            className={styles.formControl}
-                            id="email"
-                            name="email"
-                            placeholder="email"
-                            required
-                        />
-                    </div>
+                        </div>
 
-                    <div className={styles.formGroup}>
-                        <label id="phone-label" for="inputphone"> Phone number </label>
-                        <input type="phone"
-                            className={styles.formControl}
-                            id="phone"
-                            name="phone"
-                            placeholder="111-222-3333"
-                            required />
-                    </div>
-                    <div className={styles.formGroup}>
-                        <label> Inquiry</label>
-                        <textarea
-                            id="coments"
-                            className={styles.inputTextarea}
-                            name="comment"
-                            placeholder="Please enter your inquiry here...">
+                        <div className={styles.formGroup}>
+                            <label id="phone-label" for="inputphone"> Phone number </label>
+                            <input type="phone"
+                                className={styles.formControl}
+                                id="phone"
+                                name="phone"
+                                placeholder="111-222-3333"
+                                required />
+                        </div>
+                        <div className={styles.formGroup}>
+                            <label> Inquiry</label>
+                            <textarea
+                                id="coments"
+                                className={styles.inputTextarea}
+                                name="message"
+                                placeholder="Please enter your inquiry here...">
 
-                        </textarea>
-                    </div>
-                    <div className={styles.formGroup}>
-                        <button type="submit"
-                            id="submit"
-                            className={styles.submitButton}>Submit</button>
-                    </div>
-                </form>
+                            </textarea>
+                        </div>
+                        <div className={styles.formGroup}>
+                            <button type="submit"
+                                value="Send"
+                                id="submit"
+                                
+                                className={styles.submitButton}>Submit</button>
+                        </div>
+                    </form>
+                </div>
             </div>
-        </div>
 
-    );
-}
-export default Inquiry;
+        );
+    };
+
+    // export default inquiry

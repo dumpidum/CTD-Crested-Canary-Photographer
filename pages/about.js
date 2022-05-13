@@ -1,7 +1,7 @@
 import styles from '../styles/About.module.css';
 
 
-function About() {
+function about() {
     return (
         <div className={styles.about}>
             <div >
@@ -11,8 +11,7 @@ function About() {
                 />
             </div>
             <div className={styles.container}>
-                {/* <h1 class="font-weight-light">About Us</h1> */}
-
+               
                 <h3>Welcome to Photographer studio.</h3>
                 <p>
                     Photos are about visual storytelling. In today’s media-rich environment, people often look first to images, then to words. With this in mind, it is important that every image be carefully selected to communicate with impact.<br />
@@ -27,4 +26,4 @@ function About() {
     )
 }
 
-export default About;
+export default about;
