@@ -1,6 +1,7 @@
 import React from 'react';
 import emailjs from 'emailjs-com';
 import styles from '../styles/Inquiry.module.css';
+import {  toast } from 'react-toastify';
 
 export default function ContactUs()  {
     function sendEmail(e) {
@@ -8,9 +9,9 @@ export default function ContactUs()  {
 
         emailjs.sendForm(process.env.NEXT_PUBLIC_YOUR_SERVICE_ID, 'template_ri9kmmp', e.target, process.env.NEXT_PUBLIC_YOUR_USER_ID)
             .then((result) => {
-                alert('email sent successfully');
+                toast.success('email sent successfully');
             }, (error) => {
-                alert('error sending email');
+                toast.error('error sending email');
             });
             e.target.reset();
     }
@@ -22,7 +23,7 @@ export default function ContactUs()  {
                     <form id="survey-form"  onSubmit={sendEmail}>
 
                         <div className={styles.formGroup}>
-                            <label id="name-label" for="inputname">First and last name</label>
+                            <label id="name-label" htmlForm="inputname">First and last name</label>
                             <div className={styles.name}>
                                 <input type="text" name="user_name"
                                     className={styles.formControlName}
@@ -36,7 +37,7 @@ export default function ContactUs()  {
                                 /></div>
                         </div>
                         <div className={styles.formGroup}>
-                            <label id="email-label" for="inputemail"> Email </label>
+                            <label id="email-label" htmlForm="inputemail"> Email </label>
                             <input type="email"
                                 className={styles.formControl}
                                 id="email"
@@ -47,7 +48,7 @@ export default function ContactUs()  {
                         </div>
 
                         <div className={styles.formGroup}>
-                            <label id="phone-label" for="inputphone"> Phone number </label>
+                            <label id="phone-label" htmlForm="inputphone"> Phone number </label>
                             <input type="phone"
                                 className={styles.formControl}
                                 id="phone"
