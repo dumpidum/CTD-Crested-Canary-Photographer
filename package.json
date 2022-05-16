@@ -22,7 +22,8 @@
     "react": "18.0.0",
     "react-dom": "18.0.0",
     "react-minimal-side-navigation": "^1.9.2",
-    "react-router-dom": "^6.3.0"
+    "react-router-dom": "^6.3.0",
+    "react-toastify": "^9.0.1"
   },
   "devDependencies": {
     "eslint": "8.12.0",
