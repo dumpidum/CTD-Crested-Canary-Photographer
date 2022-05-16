@@ -16,7 +16,7 @@ export function AuthProvider({ children }) {
 
     }
     function signout(){
-        return signOut(authentication,email,password)
+        return signOut();
 
     }
 
