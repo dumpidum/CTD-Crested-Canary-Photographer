@@ -30,7 +30,7 @@ function Signup() {
 
             </form>
             <p> Already have an account? {" "}
-                <span className="signin" onClick={signIn}>Sign In</span>
+                <span className="signin" onClick="/signin">Sign In</span>
                 </p>
                  
 </div >

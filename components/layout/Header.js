@@ -13,12 +13,12 @@ function Header() {
                     <Logo />
                     <>
                         {/* {!isHome && <LogoutButton />} */}
-                        < img className="user_img" onClick="" alt="profile pic"
-                        />
+                    
+                    
                     </>
                     <Link href="/signup">Sign Up</Link>{" "}
                     <Link href="/signin">Sign In</Link>
-                    <button onClick="">Sign In</button>
+                
 
                 </nav>
             </header>
