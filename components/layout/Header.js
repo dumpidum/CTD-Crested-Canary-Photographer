@@ -1,21 +1,24 @@
-import { useSession, signOut, signIn } from "next-auth/react";
-import Logo from "./Logo";
-function Header() {
-    const { data: session } = useSession();
 
-    console.log(session);
+import Logo from "./Logo";
+import signIn from "../../pages/signin";
+import Link from "next/link";
+function Header() {
+
+
+
     return (
         <div>
             <header>
                 <nav>
                     <Logo />
-                    {session ? (
-                        <>
-                            {/* {!isHome && <LogoutButton />} */}
-                            < img className="user_img" onClick={signOut} src={session.user.image} alt="profile pic"
-                            />
-                        </>
-                    ) : (<button onClick={signIn}>Sign In</button>)}
+                    <>
+                        {/* {!isHome && <LogoutButton />} */}
+                        < img className="user_img" onClick="" alt="profile pic"
+                        />
+                    </>
+                    <Link href="/signup">Sign Up</Link>{" "}
+                    <Link href="/signin">Sign In</Link>
+                    <button onClick="">Sign In</button>
 
                 </nav>
             </header>

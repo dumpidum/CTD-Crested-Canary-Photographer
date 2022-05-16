@@ -9,10 +9,6 @@
             {
                 "title": "Products",
                 "path": "/products"
-            },
-            {
-                "title": "Video",
-                "path": "/video"
             }
         ]
     },
