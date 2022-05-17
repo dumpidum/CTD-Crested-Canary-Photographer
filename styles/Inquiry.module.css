@@ -111,11 +111,12 @@
 
 .submitButton {
   display: block;
-  width: 100%;
+  width: 15%;
   padding: 0.75rem;
-  background: rgba(51, 27, 51, 0.219);
+  background: rgb(5, 5, 5);
   color: inherit;
-  border-radius: 2px;
+  color: white;
+  border-radius: 4px;
   cursor: pointer;
 }
 .submitButton:focus {
