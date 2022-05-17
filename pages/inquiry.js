@@ -9,9 +9,9 @@ export default function ContactUs() {
 
         emailjs.sendForm(process.env.NEXT_PUBLIC_YOUR_SERVICE_ID, 'template_ri9kmmp', e.target, process.env.NEXT_PUBLIC_YOUR_USER_ID)
             .then((result) => {
-                toast.success('email sent successfully');
+                toast.success('Email sent successfully');
             }, (error) => {
-                toast.error('error sending email');
+                toast.error('Error sending email');
             });
         e.target.reset();
     }
@@ -42,7 +42,7 @@ export default function ContactUs() {
                             className={styles.formControl}
                             id="email"
                             name="user_email"
-                            placeholder="email"
+                            placeholder="Email"
                             required
                         />
                     </div>
