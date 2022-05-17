@@ -1,10 +1,12 @@
-
 import Logo from "./Logo";
-import signIn from "../../pages/signin";
 import Link from "next/link";
+import { useAuth } from "../Context/AuthContext";
+
 function Header() {
 
+    const { currentUser, signout } = useAuth();
 
+    console.log("Should be false", currentUser)
 
     return (
         <div>
@@ -13,23 +15,22 @@ function Header() {
                     <Logo />
                     <>
                         {/* {!isHome && <LogoutButton />} */}
-                    
-                    
-                    </>
-                    <Link href="/signup">Sign Up</Link>{" "}
-                    <Link href="/signin">Sign In</Link>
-                
 
+
+                    </>
+                    {!currentUser ? (
+                        <>
+                            <Link href="/signin">Sign In</Link>
+                        </>
+                    ) :
+                        <button onClick={signout}>Sign Out</button>
+                    }
                 </nav>
             </header>
-
-
         </div>
     )
 }
 
 
 export default Header;
-
-
 
