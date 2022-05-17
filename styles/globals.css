@@ -195,5 +195,75 @@ a {
      cursor: pointer;
    }
 
+.signIn{
+  display: grid;
+  place-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 100px;
+  padding-bottom:100px;
+}
+.signIn >form{
+  display: flex;
+  flex-direction: column;
+}
+.signIn >form > input{
+  width:350px;
+  height:40px;
+  font-size: 20px;
+  padding-left: 20px;
+  margin-bottom: 10px;
+  border-radius:5px;
+}
+.signIn >form >button {
+  width:360px;
+  height: 50px;
+  font-size: large;
+  background-color:#b12f07;
+  border-radius: 6px;
+  color: white;}
+
+  .sign_in {
+    color: #0174b7;
+    cursor: pointer;
+}
+.signIn > p {
+    margin-top: 18px;
+}
 
 
+.signup{
+  display: grid;
+  place-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 100px;
+  padding-bottom:100px;
+}
+.signup >form{
+  display: flex;
+  flex-direction: column;
+}
+.signup >form > input{
+  width:350px;
+  height:40px;
+  font-size: 20px;
+  padding-left: 20px;
+  margin-bottom: 10px;
+  border-radius:5px;
+}
+.signup >form >button {
+  width:360px;
+  height: 50px;
+  font-size: large;
+  background-color:#d84012;
+  border-radius: 6px;
+  color: white;}
+
+  .sign_up {
+    color: #0174b7;
+    cursor: pointer;
+}
+.signup> p {
+    margin-top: 18px;
+}

@@ -1,23 +1,25 @@
 import React, { useRef } from "react";
 import { useAuth } from '../components/Context/AuthContext';
-import signIn from "./signin";
+import { useRouter } from "next/router";
 
 
 function Signup() {
     const emailRef = useRef();
     const nameRef = useRef();
     const passwordRef = useRef();
-    const { signup } = useAuth();
-
+    const { signup, signin } = useAuth();
+    const navigate = useRouter();
     function handeSubmit(e) {
         e.preventDefault()
         signup(emailRef.current.value, passwordRef.current.value)
+        navigate.push('/')
+      
     }
 
     console.log(emailRef);
 
     return (
-        <div>
+        <div className="signup">
             <form className="signupForm">
                 <input className="name" type="text" ref={nameRef} placeholder='Full name (required if registering' />
 
@@ -30,11 +32,13 @@ function Signup() {
 
             </form>
             <p> Already have an account? {" "}
-                <span className="signin" onClick="/signin">Sign In</span>
-                </p>
-                 
-</div >
-       )
+            <span className="sign_up" onClick={()=>{navigate.push('/signin')}}>Sign In</span></p>
+
+
+
+
+        </div>
+    )
 }
 
-export default Signup; 
+   export default Signup;
