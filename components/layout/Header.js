@@ -20,7 +20,7 @@ function Header() {
                     </>
                     {!currentUser ? (
                         <>
-                            <Link href="/signin">Sign In</Link>
+                            <Link href="/signin" className="logo">Sign In</Link>
                         </>
                     ) :
                         <button onClick={signout}>Sign Out</button>

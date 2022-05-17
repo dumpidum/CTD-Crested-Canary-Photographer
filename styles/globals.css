@@ -58,9 +58,9 @@ header>nav {
 }
 
 .logo {
-  /* width: 12rem; */
   height: 100%;
-  
+  color: inherit;
+  text-decoration: inherit;
 }
 
 main {
@@ -71,6 +71,23 @@ main {
   width: 100%;
   height: 50%;
   padding: 10rem 0 15rem 0;
+}
+
+button {
+  display: block;
+  width: 100px;
+  padding: 0.75rem;
+  background: rgb(5, 5, 5);
+  color: inherit;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:focus {
+  border-color: #80bdff;
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
 }
 
 .sidebar {
@@ -190,80 +207,91 @@ a {
   border-radius: 50%;
   width: 50px;
   height: 50px;
-   }
-   .user_img{
-     cursor: pointer;
-   }
+}
 
-.signIn{
+.user_img {
+  cursor: pointer;
+}
+
+.signIn {
   display: grid;
   place-items: center;
   margin-left: auto;
   margin-right: auto;
   padding-top: 100px;
-  padding-bottom:100px;
+  padding-bottom: 100px;
 }
-.signIn >form{
+
+.signIn>form {
   display: flex;
   flex-direction: column;
 }
-.signIn >form > input{
-  width:350px;
-  height:40px;
+
+.signIn>form>input {
+  width: 350px;
+  height: 40px;
   font-size: 20px;
   padding-left: 20px;
   margin-bottom: 10px;
-  border-radius:5px;
+  border-radius: 5px;
 }
-.signIn >form >button {
-  width:360px;
+
+.signIn>form>button {
+  width: 360px;
   height: 50px;
   font-size: large;
-  background-color:#b12f07;
+  background-color: #b12f07;
   border-radius: 6px;
-  color: white;}
-
-  .sign_in {
-    color: #0174b7;
-    cursor: pointer;
-}
-.signIn > p {
-    margin-top: 18px;
+  color: white;
 }
 
+.sign_in {
+  color: #0174b7;
+  cursor: pointer;
+}
 
-.signup{
+.signIn>p {
+  margin-top: 18px;
+}
+
+
+.signup {
   display: grid;
   place-items: center;
   margin-left: auto;
   margin-right: auto;
   padding-top: 100px;
-  padding-bottom:100px;
+  padding-bottom: 100px;
 }
-.signup >form{
+
+.signup>form {
   display: flex;
   flex-direction: column;
 }
-.signup >form > input{
-  width:350px;
-  height:40px;
+
+.signup>form>input {
+  width: 350px;
+  height: 40px;
   font-size: 20px;
   padding-left: 20px;
   margin-bottom: 10px;
-  border-radius:5px;
+  border-radius: 5px;
 }
-.signup >form >button {
-  width:360px;
+
+.signup>form>button {
+  width: 360px;
   height: 50px;
   font-size: large;
-  background-color:#d84012;
+  background-color: #d84012;
   border-radius: 6px;
-  color: white;}
-
-  .sign_up {
-    color: #0174b7;
-    cursor: pointer;
+  color: white;
 }
-.signup> p {
-    margin-top: 18px;
+
+.sign_up {
+  color: #0174b7;
+  cursor: pointer;
+}
+
+.signup>p {
+  margin-top: 18px;
 }
